@@ -1,76 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>AirBnB Clone</title>
-
-		<link rel="shortcut icon" href="images/icon.ico" >
-
-		<link rel="stylesheet" href="styles/4-common.css"/>
-		<link rel="stylesheet" href="styles/3-header.css"/>
-		<link rel="stylesheet" href="styles/3-footer.css"/>
-		<link rel="stylesheet" href="styles/6-filters.css"/>
-		<link rel="stylesheet" href="styles/100-places.css"/>
-	</head>
-    <body>
-		<header>
-			<div id="header_logo"></div>
-		</header>
-		<div class="container">
-			<section class="filters">
-				<button>Search</button>
-				<div class="locations">
-					<h3>States</h3>
-					<h4>California, Arizona...</h4>
-					<ul class="popover">
-						<li><h2>Arizona</h2>
-							<ul>
-								<li><h4>Page</h4></li>
-								<li><h4>Page2</h4></li>
-							</ul></li>
-						<li><h2>California</h2>
-							<ul>
-								<li><h4>San Francisco</h4></li>
-								<li><h4>Los Altos</h4></li>
-							</ul></li>
-					</ul>
-				</div>
-				<div class="filter_amenities">
-					<h3>Amenities</h3>
-					<h4>Internet, Kitchen...</h4>
-					<ul class="popover">
-						<li><h4>Internet</h4></li>
-						<li><h4>TV</h4></li>
-						<li><h4>Kitchen</h4></li>
-						<li><h4>Iron</h4></li>
-					</ul>
-				</div>
-
-			</section>
-			<section class="places">
-				<h1>Places</h1>
-				<article>
-					<div class="headline">
-						<h2 class="article_title">My home</h2>
-						<div class="price_by_night">$80</div>
-					</div>
-					<div class="information">
-						<div class="max_guest">
-							<div class="guest_icon"></div>
-							<p>2 Guests</p>
-						</div>
-						<div class="number_rooms">
-							<div class="bed_icon"></div>
-							<p>1 Bedroom</p>
-						</div>
-						 <div class="number_bathrooms">
-							<div class="bath_icon"></div>
-							<p>1 Bathroom</p>
-						</div>
-					</div>
-					<div class="user"><b>Owner</b>: Farida Anita</div>
-					<div class="description">
-                        This is a lovely 1 bedroom and 1 bathroom apartment that can accomodate 2 people. It is located at the center of Shanghai and next to subway line 1, 1 stop to People Square, 2 stops to Bund, 3stops to Jinqan Temple.
-                    </div>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles/4-common.css">
+    <link rel="stylesheet" type="text/css" href="styles/3-header.css">
+    <link rel="stylesheet" type="text/css" href="styles/3-footer.css">
+    <link rel="stylesheet" type="text/css" href="styles/6-filters.css">
+    <link rel="stylesheet" type="text/css" href="styles/100-places.css">
+    <link rel="icon" type="image/png" href="./images/icon.png">
+    <link rel="icon" type="image/png" href="./images/icon_group.png">
+    <link rel="icon" type="image/png" href="./images/icon_bed.png">
+    <link rel="icon" type="image/png" href="./images/icon_bath.png">
+    <title>AirBnB Clone</title>
+  </head>
+  <body>
+    <header>
+    </header>
+    <div class="container">
+      <section class="filters">
+	<div class="locations">
+	  <h3>States</h3>
+          <h4>California, Arizona...</h4>
+          <ul class="popover">
+            <li><h2>Arizona:</h2>
+              <ul>
+                <li>Page</li>
+                <li>Page2</li>
+              </ul>
+            </li>
+            <li><h2>California:</h2>
+              <ul>
+                <li>San Francisco</li>
+                <li> Los Altos</li>
+              </ul>
+          </ul>
+        </div>
+        <div class="amenities">
+          <h3>Amenities</h3>
+          <h4>Internet, Kitchen...</h4>
+          <ul class="popover">
+            <li>Internet</li>
+            <li>TV<li>
+            <li>Kitchen</li>
+            <li>Iron</li>
+          </ul>
+        </div>
+	<button>Search</button>
+      </section>
+      <section class="places">
+	<h1>Places</h1>
+        <article>
+          <h2>My home</h2>
+          <div class="price_by_night">$80</div>
+          <div class="information">
+            <div class="max_guest">2 guests</div>
+            <div class="number_rooms">1 bedroom</div>
+            <div class="number_bathrooms">1 bathroom</div>
+          </div>
+          <div class="user"><strong>Owner:</strong> Farida Anita</div>
+		  <div class="description">This is a lovely 1 bedroom and 1 bathroom apartment that can accomodate 2 people. It is located at the center of Shanghai and next to subway line 1, 1 stop to People Square, 2 stops to Bund, 3stops to Jinqan Temple.</div>
 					<div class="amenities">
 						<h2 class="article_subtitle">Amenities</h2>
 						<ul>
@@ -97,29 +85,15 @@
 						</ul>
 					</div>
 				</article>
-				<article>
-					<div class="headline">
-						<h2 class="article_title">Tiny house</h2>
-						<div class="price_by_night">$65</div>
-					</div>
+				<article><h2>Tiny house</h2>
+					<div class="price_by_night">$65</div>
 					<div class="information">
-                        <div class="max_guest">
-                            <div class="guest_icon"></div>
-                            <p>4 Guests</p>
-                        </div>
-                        <div class="number_rooms">
-                            <div class="bed_icon"></div>
-                            <p>2 Bedroom</p>
-                        </div>
-                         <div class="number_bathrooms">
-                            <div class="bath_icon"></div>
-                            <p>1 Bathroom</p>
-                        </div>
-                    </div>
-					<div class="user"><b>Owner</b>: Tony Mshila</div>
-					<div class="description">
-						Our place is a private, affordable stand-alone guest house centrally located ust minutes to French Quarters, downtown, the Fair Grounds(Jazz Fest) and City Park. The guest house is a quaint 400square ft. with a full bath, mini kitchen & living room. The extra high ceilings make the home feel more spacioous. The sofa converts to a bed also. We have a hand made counter area that adds character to the room and a great porch/deck to relax on and have a glass of Merlot.
-                    </div>
+					  <div class="max_guest">4 guests</div>
+					  <div class="number_rooms">2 bedrooms</div>
+					  <div class="number_bathrooms">1 bathroom</div>
+					</div>
+					<div class="user"><strong>Owner:</strong> Tony Mshila</div>
+					<div class="description">Our place is a private, affordable stand-alone guest house centrally located ust minutes to French Quarters, downtown, the Fair Grounds(Jazz Fest) and City Park. The guest house is a quaint 400square ft. with a full bath, mini kitchen & living room. The extra high ceilings make the home feel more spacioous. The sofa converts to a bed also. We have a hand made counter area that adds character to the room and a great porch/deck to relax on and have a glass of Merlot.</div>
 					<div class="amenities">
                         <h2 class="article_subtitle">Amenities</h2>
                         <ul>
@@ -138,29 +112,15 @@
                         </ul>
                     </div>
 				</article>
-				<article>
-					<div class="headline">
-						<h2 class="article_title">A suite</h2>
-						<div class="price_by_night">$190</div>
-					</div>
+				<article><h2>A suite</h2>
+					<div class="price_by_night">$190</div>
 					<div class="information">
-                        <div class="max_guest">
-                            <div class="guest_icon"></div>
-                            <p>6 Guests</p>
-                        </div>
-                        <div class="number_rooms">
-                            <div class="bed_icon"></div>
-                            <p>3 Bedroom</p>
-                        </div>
-                         <div class="number_bathrooms">
-                            <div class="bath_icon"></div>
-                            <p>2 Bathroom</p>
-                        </div>
-                    </div>
-					<div class="user"><b>Owner</b>: Andrew Sinja</div>
-					<div class="description">
-						Newly renovated spacious 3 bedrooms 2 baths in cozy Gastown style unit with the views of North Shore mountains,Woodward's landmark building situated at the historic heart of Vancouver.
+					  <div class="max_guest">6 guests</div>
+					  <div class="number_rooms">3 bedrooms</div>
+					  <div class="number_bathrooms">2 bathrooms</div>
 					</div>
+					<div class="user"><strong>Owner:</strong> Andrew Sinja</div>
+					<div class="description">Newly renovated spacious 3 bedrooms 2 baths in cozy Gastown style unit with the views of North Shore mountains,Woodward's landmark building situated at the historic heart of vancouver.</div>
 					<div class="amenities">
                         <h2 class="article_subtitle">Amenities</h2>
                         <ul>
