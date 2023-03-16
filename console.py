@@ -74,12 +74,13 @@ class HBNBCommand(cmd.Cmd):
                 storage.all()[key].save()
 
     def do_EOF(self, line):
-        """Command to exit/end the program.
+        """Handles End Of File character.
         """
+        print()
         return True
 
     def do_quit(self, line):
-        """Quit command to exit the program.
+        """Exits the program.
         """
         return True
 

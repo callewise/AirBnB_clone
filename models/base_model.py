@@ -1,31 +1,14 @@
 #!/usr/bin/python3
-"""A base class with common methods/attributes
-for other classes
-"""
+"""This script is the base model"""
 
 import uuid
-from datetime import datetime, time, date
+from datetime import datetime
 from models import storage
 
 
 class BaseModel:
 
-    """Class from which all other classes will inherit
-    BaseModel that defines all common attributes/methods for other classes
-    PUBLIC INSTANCE ATTRIBUTES:
-    id: string - assign with an uuid when an instance is created
-        uuid.uuid4(): generate a unique id but cant forget to
-        convert to string. The goal is to have a unique id for each BaseMode
-    created_at:  datetime - assign with the current datetime when an instance
-                 is created
-    updated_at: datetime - assign with the current datetime when an instance
-            is created and it will be updated every time you change your
-            object
-    __str__: should print: [<class name>] (<self.id>) <self.__dict__>
-    PUBLIC INSTANCE METHODS
-    save(self):
-    to_dict(self):
-    """
+    """Class from which all other classes will inherit"""
 
     def __init__(self, *args, **kwargs):
         """Initializes instance attributes
@@ -58,9 +41,7 @@ class BaseModel:
             format(type(self).__name__, self.id, self.__dict__)
 
     def save(self):
-        """updates the public instance attribute updated_at
-        with the current datetime
-        """
+        """updates the public instance attribute updated_at"""
 
         self.updated_at = datetime.now()
         storage.save()
@@ -68,10 +49,8 @@ class BaseModel:
     def to_dict(self):
         """returns a dictionary containing all keys/values of __dict__"""
 
-        new_dict = self.__dict__.copy()
-        new_dict.update({
-            "__class__": self.__class__.__name__,
-            "updated_at": self.updated_at.isoformat(),
-            "created_at": self.created_at.isoformat()
-            })
-        return new_dict
+        my_dict = self.__dict__.copy()
+        my_dict["__class__"] = type(self).__name__
+        my_dict["created_at"] = my_dict["created_at"].isoformat()
+        my_dict["updated_at"] = my_dict["updated_at"].isoformat()
+        return my_dict
